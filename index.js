@@ -3,19 +3,19 @@ const fs = require('fs')
 const {Circle, Square, Triangle} = require ("./lib/shapes")
 
 
-//Setting a class that has methods to render the text/shape in the SVG 
-class SVG {
-    constructor(){
-        this.textElement = ''
-        this.shapeElement = ''
-    }
-}
 // Writing out user input
 const questions = [
     {
         type: 'input',
         name: 'text',
         message: "TEXT : Enter up to 3 characters",
+        validate : function (input) {
+            if (input.length >= 1 && input.length <=3){
+                return true;
+            } else {
+                return "Please enter only 1-3 characters"
+            }
+        }
     },
     {
         type: 'input',
@@ -35,5 +35,13 @@ const questions = [
     },
 ];
 
+//function generating and saving logo 
+
+
+
 // function to write data to file 
+fs.writeFile("./examples", shape.render(), (err,result) => {
+    if (err) throw err;
+    console.log ('Logo has been created!')
+});
 
