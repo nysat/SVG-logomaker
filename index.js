@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = require ('inquirer')
 const fs = require('fs')
 const {Circle, Square, Triangle} = require ("./lib/shapes")
 
@@ -37,11 +37,26 @@ const questions = [
 
 //function generating and saving logo 
 
-
-
-// function to write data to file 
-fs.writeFile("./examples", shape.render(), (err,result) => {
-    if (err) throw err;
-    console.log ('Logo has been created!')
+function generateLogo (answers) {
+    const uppercaseText = answers.text.toUpperCase();
+    let shape; 
+    if (answers.shape === 'Circle'){
+        shape = new Circle (answers.textColor, uppercaseText, answers.shapeColor)
+    }else if (answers.shape === 'Triangle') {
+        shape = new Triangle (answers.textColor, uppercaseText, answers.shapeColor)
+    }else if (answers.shape === 'Square') {
+        shape = new Square (answers.textColor, uppercaseText, answers.shapeColor)
+    }
+    return shape;
+}
+// use inquirer to prompt user for input
+inquirer.prompt (questions).then ((answers) => {
+    const shape = generateLogo(answers);
+    fs.writeFile("./examples/logo.svg", shape.render(), (err,result) => {
+    if (err){
+        console.log ('Error creating logo')
+    } else {
+        console.log ('Generated logo.svg')
+    } 
+})
 });
-
