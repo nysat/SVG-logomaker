@@ -1,7 +1,7 @@
 # SVG-LOGOMAKER
 ![Github license](https://img.shields.io/badge/license--blue.svg)
 ## Description
-This project was built to be able to generate a simple logo using code instead of having to go through a graphic designer. This project was made using knoeledge of Node and object oriented programming as well as implementing the use of Jest to test the codes functionality.
+This project was built to be able to generate a simple logo implementing scalable vector graphics (SVG) instead of having to go through a graphic designer. This project was made using knoeledge of Node and object oriented programming as well as implementing the use of Jest to test the codes functionality.
 ##### Video Walkthrough link 
 N/A
 ##### Screenshot
