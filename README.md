@@ -21,7 +21,7 @@ How to use this application: Clone the code and in the terminal enter "node inde
 ## Contributing
 n/a
 ## License
-This project is licensed under the  license. ![Github license](https://img.shields.io/badge/license--blue.svg)
+This project is licensed under the MIT license. ![Github license](https://img.shields.io/badge/license--blue.svg)
 ## Test
 To run the tests in the terminals type "npx jest" 
 ## Questions 
