@@ -1,21 +1,12 @@
 {
   "name": "svg-logomaker",
   "version": "1.0.0",
-  "description": "Generating simple logos for projects as to not need a Graphic designer",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "node",
-    "javascript"
-  ],
-  "author": "Nysa Trejo",
-  "license": "MIT",
-  "dependencies": {
-    "inquirer": "^8.2.6"
-  },
-  "devDependencies": {
-    "jest": "^29.6.4"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
